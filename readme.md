@@ -2,4 +2,4 @@
 test AR.js - GitHub Pages
 
 project page
-https://akagiri-pivot.github.io/testARjs/
+https://akagiri-pivot.github.io/testARjs/index.html
