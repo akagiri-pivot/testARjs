@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sample04 | test AR.js - Github Pages</title>
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-script-type" content="text/javascript">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta property="og:title" content="">
+<meta property="og:image" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="">
+<meta property="og:type" content="website">
+<meta property="og:country-name" content="Japan">
+<link rel="shortcut icon" type="image/x-icon" href="/Contents/image/favicon.ico">
+<link rel="icon" type="image/png" href="/Contents/image/favicon_16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/Contents/image/favicon_32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/Contents/image/favicon_144.png">
+<meta name="msapplication-TileImage" content="/Contents/image/favicon_144.png"/>
+<meta name="msapplication-TileColor" content="#3e3a39"/>
+<meta name="theme-color" content="#3e3a39" >
+</head>
+  <body style="margin:0px; overflow:hidden;">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+
+    <a-scene embedded arjs="debugUIEnabled:false;">
+
+      <a-assets>
+        <a-asset-item id="obj" src="/testARjs/assets/model/bunny.obj"></a-asset-item>
+        <a-asset-item id="mtl" src="/testARjs/assets/model/bunny.mtl"></a-asset-item>
+      </a-assets>
+
+      <a-marker type="pattern" url="/testARjs/assets/marker/marker1_1.patt">
+        <a-obj-model
+          src="#obj"
+          mtl="#mtl"
+          scale="1 1 1"
+          position="0 0.5 0">
+          <a-animation
+            attribute="rotation"
+            to="0 360 0"
+            dur="3000"
+            easing="linear"
+            repeat="indefinite">
+          </a-animation>
+        </a-obj-model>
+      </a-marker>
+
+      <a-marker type="pattern" url="/testARjs/assets/marker/marker2_1.patt">
+        <a-obj-model
+          src="#obj"
+          mtl="#mtl"
+          scale="1 1 1"
+          position="0 0.5 0">
+          <a-animation
+            attribute="position"
+            from="0 0.5 0"
+            to="3.5 4 0"
+            dur="3000"
+            easing="linear"
+            repeat="indefinite">
+          </a-animation>
+        </a-obj-model>
+      </a-marker>
+
+      <a-marker type="pattern" url="/testARjs/assets/marker/marker3_1.patt">
+        <a-obj-model
+          src="#obj"
+          mtl="#mtl"
+          scale="1 1 1"
+          position="0 0.5 0">
+          <a-animation
+            attribute="rotation"
+            to="0 360 0"
+            dur="3000"
+            easing="linear"
+            repeat="indefinite">
+          </a-animation>
+        </a-obj-model>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
